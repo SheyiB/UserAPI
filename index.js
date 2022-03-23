@@ -21,7 +21,7 @@ app.use(morgan('dev'));
 //Mount Routers
 app.use('/userApi', user);
 
-const PORT = process.env.PORT | 2300;
+const PORT = process.env.PORT || 2300;
 
 
 app.listen(PORT, ()=>{
