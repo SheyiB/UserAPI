@@ -198,7 +198,7 @@ async function tokenizer(req,res ) {
      }
      try {
          // Verify token
-        const decoded = jwt.verify(token,'hahaha123');
+        const decoded = jwt.verify(token,process.ENV.SECRET);
 
          console.log(decoded);
 
