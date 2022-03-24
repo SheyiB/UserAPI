@@ -113,11 +113,11 @@ module.exports.uploadProfilePicture = async(req,res) =>{
 
         file.name = `photo_${req.user._id}${path.parse(file.name).ext}`;
 
-        var serviceAccount = require("./userapi.json");
+        var serviceAccount = require(process.ENV.FIREBASEJson);
 
         admin.initializeApp({
             credential: admin.credential.cert(serviceAccount),
-            storageBucket: "userapi-f472f.appspot.com"
+            storageBucket: process.ENV.FirebaseLink
         });
 
         var bucket = admin.storage().bucket();
