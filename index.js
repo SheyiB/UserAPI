@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const app = express();
 const dotenv = require('dotenv');
 
-mongoose.connect('mongodb:localhost/userapi', ()=>{
+mongoose.connect('mongodb::localhost//userapi', ()=>{
     console.log('Database Connected'), e => {console.log(`Could not connect because of ${e.message}`)}
 });
 
